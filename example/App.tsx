@@ -17,35 +17,12 @@ const VIDEOS = {
   id: "10912"
 };
 
-type LabeledSwitchProps = {
-  label: string,
-  onPress: () => void,
-  isOn: boolean,
-};
-
-// a switch button with a label
-const LabeledSwitch = (props: LabeledSwitchProps) => (
-  <View style={{ width: '33%', alignItems: 'center' }}>
-    <Switch
-      trackColor={{ false: "#767577", true: "#81b0ff" }}
-      thumbColor="#f4f3f4"
-      onValueChange={props.onPress}
-      value={props.isOn}
-    />
-    <Text style={{ color: 'black' }}>{props.label}</Text>
-  </View>)
-
-
 const App: () => React$Node = () => {
   const [currentTime, setCurrentTime] = React.useState<number>(0);
   const [events, setEvents] = React.useState<string[]>([]);
   const [eventsCount, setEventsCount] = React.useState<number>(1);
   const [isPlaying, setIsPlaying] = React.useState<boolean>(false);
 
-  const events = (data: any) => {
-    // Handle messages received from the WebView
-    console.log('Received message from WebView:', data);
-  };
 
   const [videoId, setVideoId] = React.useState<string>(VIDEOS.id);
   const player = React.useRef<TeyutoPlayerSdk | undefined>(undefined);
@@ -58,7 +35,7 @@ const App: () => React$Node = () => {
     setEvents([...eventsCopy, `${eventsCount}. ${new Date().toLocaleTimeString()}: ${event}`]);
     setEventsCount(eventsCount + 1);
   } 
-
+  
   return (
     <> 
       <View style={styles.view}>
