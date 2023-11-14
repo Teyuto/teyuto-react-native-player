@@ -10,7 +10,7 @@ import TeyutoPlayerSdk from '@teyuto/react-native-player';
 import * as React from 'react';
 import {
   StyleSheet,
-  Text, View, Switch, Picker, Button
+  Text, View, Button
 } from 'react-native'; 
 
 const VIDEOS = {
