@@ -34,10 +34,15 @@ export default class App extends Component {
           ref={(r) => (this.player = r)}
           id="<VIDEO_ID>"
           controls='on'
-          muted='on'
+          muted='off'
           autoplay='on'
           loop='on'
-          low_latency='on'
+          playbackRates="off"
+          qualitySelector="on"
+          captions="on"
+          seekButtons="on"
+          playerColor="#000"
+          low_latency="on"
           token=''
          />
 

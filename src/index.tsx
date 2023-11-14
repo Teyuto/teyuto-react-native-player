@@ -12,6 +12,7 @@ export type PlayerProps = {
   controls?: string;
   playbackRates?: string;
   qualitySelector?: string;
+  seekButtons?: string;
   playerColor?: string;
   loop?: string;
   captions?: string;
@@ -170,6 +171,7 @@ export default class TeyutoPlayerSdk extends Component<PlayerProps, {}> {
         controls: 'controls',
         playbackRates: 'playbackRates',
         qualitySelector: 'qualitySelector',
+        seekButtons: 'seekButtons',
         playerColor: 'playerColor',
         loop: 'loop',
         captions: 'captions',
@@ -182,6 +184,7 @@ export default class TeyutoPlayerSdk extends Component<PlayerProps, {}> {
           key === 'controls' ||
           key === 'playbackRates' ||
           key === 'qualitySelector' ||
+          key === 'seekButtons' ||
           key === 'playerColor' ||
           key === 'loop' ||
           key === 'captions' ||

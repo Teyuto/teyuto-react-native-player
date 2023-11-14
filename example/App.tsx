@@ -48,7 +48,12 @@ const App: () => React$Node = () => {
           autoplay='on'
           loop='on'
           playbackRates="off"
+          qualitySelector="on"
+          captions="on"
+          seekButtons="on"
+          playerColor="#000"
           low_latency="on"
+
 
           // update the current time displayed in the app 
           onTimeUpdate={(time) => setCurrentTime(time)}
