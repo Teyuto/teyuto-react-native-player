@@ -96,7 +96,8 @@ export default class TeyutoPlayerSdk extends Component<PlayerProps, {}> {
 
   private onMessage(message: any) {
     
-    console.log(message.type);
+    console.log(message);
+    console.log("type",message.type);
     // message=message.data;
     
     // if (!message.type) {
@@ -225,7 +226,7 @@ export default class TeyutoPlayerSdk extends Component<PlayerProps, {}> {
         style={this.props.style || DEFAULT_STYLE}
         scrollEnabled={false}
         onMessage={(msg: any) =>
-          this.onMessage(JSON.parse(msg.nativeEvent.data))
+          this.onMessage(JSON.parse(msg.nativeEvent))
         }
         allowsInlineMediaPlayback={true}
         allowsFullscreenVideo={true}
