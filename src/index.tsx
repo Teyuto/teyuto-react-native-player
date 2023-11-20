@@ -16,7 +16,7 @@ export type PlayerProps = {
   playerColor?: string;
   loop?: string;
   captions?: string;
-  low_latency?: string;
+  lowLatency?: string;
   style?: StyleProp<ViewStyle>;
   token?: string;
 
@@ -175,7 +175,7 @@ export default class TeyutoPlayerSdk extends Component<PlayerProps, {}> {
         playerColor: 'playerColor',
         loop: 'loop',
         captions: 'captions',
-        low_latency: 'low_latency'
+        lowLatency: 'lowLatency'
       };
       for (const key in originalProps) {
         if (
@@ -188,7 +188,7 @@ export default class TeyutoPlayerSdk extends Component<PlayerProps, {}> {
           key === 'playerColor' ||
           key === 'loop' ||
           key === 'captions' ||
-          key === 'low_latency'
+          key === 'lowLatency'
         ) {
           query += `&${keyToQueryParameMap[key]}=${originalProps[key]}`;
         }

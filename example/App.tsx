@@ -70,7 +70,7 @@ const App: () => React$Node = () => {
           captions="on"
           seekButtons="on"
           playerColor="#000"
-          low_latency="on"
+          lowLatency="on"
 
           // update the current time displayed in the app 
           onTimeUpdate={(time) => setCurrentTime(time)}
