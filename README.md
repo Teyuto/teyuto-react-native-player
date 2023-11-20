@@ -42,7 +42,7 @@ export default class App extends Component {
           captions="on"
           seekButtons="on"
           playerColor="#000"
-          low_latency="on"
+          lowLatency="on"
           token=''
          />
 
