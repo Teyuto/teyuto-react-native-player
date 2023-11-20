@@ -96,7 +96,8 @@ export default class TeyutoPlayerSdk extends Component<PlayerProps, {}> {
 
   private onMessage(message: any) {
     
-    message=message.data;
+    console.log(message);
+    // message=message.data;
     
     // if (!message.type) {
     //   return;
