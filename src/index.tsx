@@ -96,13 +96,6 @@ export default class TeyutoPlayerSdk extends Component<PlayerProps, {}> {
 
   private onMessage(message: any) {
     
-    console.log(message);
-    console.log("type",message.type);
-    // message=message.data;
-    
-    // if (!message.type) {
-    //   return;
-    // }
     switch (message.type) {
       case 'controlsdisabled':
         if (this.props.onControlsDisabled) this.props.onControlsDisabled();
@@ -149,7 +142,7 @@ export default class TeyutoPlayerSdk extends Component<PlayerProps, {}> {
         break;
       case 'timeupdate':
         if (this.props.onTimeUpdate)
-          this.props.onTimeUpdate(message.currentTime);
+          this.props.onTimeUpdate(message.data.currentTime);
         break;
       case 'useractive':
         if (this.props.onUserActive) this.props.onUserActive();
@@ -159,7 +152,7 @@ export default class TeyutoPlayerSdk extends Component<PlayerProps, {}> {
         break;
       case 'volumechange':
         if (this.props.onVolumeChange)
-          this.props.onVolumeChange(message.volume);
+          this.props.onVolumeChange(message.data.volume);
         break;
     }
   }
