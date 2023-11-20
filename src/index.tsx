@@ -97,12 +97,12 @@ export default class TeyutoPlayerSdk extends Component<PlayerProps, {}> {
   private onMessage(message: any) {
     
     console.log(message);
-
-    if (!message['type']) {
+    
+    if (!message.type) {
       return;
     }
 
-    switch (message['type']) {
+    switch (message.type) {
       case 'controlsdisabled':
         if (this.props.onControlsDisabled) this.props.onControlsDisabled();
         break;
