@@ -226,7 +226,7 @@ export default class TeyutoPlayerSdk extends Component<PlayerProps, {}> {
         style={this.props.style || DEFAULT_STYLE}
         scrollEnabled={false}
         onMessage={(msg: any) =>
-          this.onMessage(JSON.parse(msg.nativeEvent))
+          this.onMessage(JSON.parse(msg.nativeEvent.data))
         }
         allowsInlineMediaPlayback={true}
         allowsFullscreenVideo={true}
