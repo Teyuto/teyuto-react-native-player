@@ -6,6 +6,7 @@ const PLAYER_HOST = 'https://teyuto.tv/video/player?w=';
 const DEFAULT_STYLE = { width: '100%', height: '100%' };
 
 export type PlayerProps = {
+  channel: string;
   id: string;
   autoplay?: string;
   muted?: string;
@@ -167,6 +168,7 @@ export default class TeyutoPlayerSdk extends Component<PlayerProps, {}> {
 
       let query = '&pip=off';
       const keyToQueryParameMap: any = {
+        channel: 'channel',
         autoplay: 'auto',
         muted: 'muted',
         controls: 'controls',
@@ -176,10 +178,12 @@ export default class TeyutoPlayerSdk extends Component<PlayerProps, {}> {
         playerColor: 'playerColor',
         loop: 'loop',
         captions: 'captions',
-        lowLatency: 'lowLatency'
+        lowLatency: 'lowLatency',
+        token: 'token'
       };
       for (const key in originalProps) {
         if (
+          key === 'channel' ||
           key === 'autoplay' ||
           key === 'muted' ||
           key === 'controls' ||
@@ -189,7 +193,8 @@ export default class TeyutoPlayerSdk extends Component<PlayerProps, {}> {
           key === 'playerColor' ||
           key === 'loop' ||
           key === 'captions' ||
-          key === 'lowLatency'
+          key === 'lowLatency' ||
+          key === 'token'
         ) {
           query += `&${keyToQueryParameMap[key]}=${originalProps[key]}`;
         }

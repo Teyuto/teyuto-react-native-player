@@ -32,7 +32,8 @@ export default class App extends Component {
       <View style={{ flex: 1 }}>
         <TeyutoPlayerSdk
           ref={(r) => (this.player = r)}
-          id="<VIDEO_ID>"
+          channel="<CHANNEL_PUBLIC>" //required
+          id="<VIDEO_ID>" //required
           controls='on'
           muted='off'
           autoplay='on'
