@@ -168,7 +168,7 @@ export default class TeyutoPlayerSdk extends Component<PlayerProps, {}> {
 
       let query = '&pip=off';
       const keyToQueryParameMap: any = {
-        channel: 'channel',
+        channel: 'cid',
         autoplay: 'auto',
         muted: 'muted',
         controls: 'controls',
