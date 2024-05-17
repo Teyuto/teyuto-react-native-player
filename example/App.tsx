@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import TeyutoPlayerSdk from '@teyuto/react-native-player';
+import TeyutoPlayer from '@teyuto/react-native-player';
 import * as React from 'react';
 import {
   StyleSheet,
@@ -43,7 +43,7 @@ const App: () => React$Node = () => {
   const [isPlaying, setIsPlaying] = React.useState<boolean>(false);
 
   const [videoId, setVideoId] = React.useState<string>(VIDEOS.id);
-  const player = React.useRef<TeyutoPlayerSdk | undefined>(undefined);
+  const player = React.useRef<TeyutoPlayer | undefined>(undefined);
 
 
   // add a line to the list of events displayed in the app
@@ -57,7 +57,7 @@ const App: () => React$Node = () => {
   return (
     <> 
       <View style={styles.view}>
-        <TeyutoPlayerSdk
+        <TeyutoPlayer
           // we keep a ref to be able to call the play() & pause() methods
           ref={(r) => (player.current = r)}
           id={videoId}

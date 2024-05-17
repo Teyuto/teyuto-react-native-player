@@ -43,7 +43,7 @@ export type PlayerProps = {
 
 
 
-export default class TeyutoPlayerSdk extends Component<PlayerProps, {}> {
+export default class TeyutoPlayer extends Component<PlayerProps, {}> {
   webref?: WebView;
   playerUrl: string;
   token: string;
