@@ -179,6 +179,8 @@ export default class TeyutoPlayer extends Component<PlayerProps, {}> {
         loop: 'loop',
         captions: 'captions',
         lowLatency: 'lowLatency',
+        related: 'related',
+        relatedTags: 'relatedTags',
         token: 'token'
       };
       for (const key in originalProps) {
@@ -194,6 +196,8 @@ export default class TeyutoPlayer extends Component<PlayerProps, {}> {
           key === 'loop' ||
           key === 'captions' ||
           key === 'lowLatency' ||
+          key === 'related' ||
+          key === 'relatedTags' ||
           key === 'token'
         ) {
           query += `&${keyToQueryParameMap[key]}=${originalProps[key]}`;
